@@ -1,0 +1,47 @@
+int main()
+{
+	Date d;
+	char user_input[50];
+
+	printf("Enter a date: \n");
+	scanf("%s", user_input);
+	Date* result = set_date_by_string(&d, user_input);
+	if(result == NULL)
+	{
+		printf("%s is invalid.\n", user_input);
+		scanf("%s", user_input);
+		exit(-1);
+	}
+	print_date(&d);
+	scanf("%s", user_input);
+	return 0;
+}
+///////////////////
+
+int main()
+{
+	Date d;
+	char user_input[50];
+
+	set_todays_date(&d);
+	print_date(&d);
+	putchar('\n');
+	scanf("%s", user_input);
+	return 0;
+}
+
+//////////////////////
+
+int main()
+{
+	Date d;
+	char user_input[50];
+
+	set_todays_date(&d);
+	print_date(&d);
+	putchar('\n');
+	set_year(&d, 2020);
+	print_date(&d);
+	scanf("%s", user_input);
+	return 0;
+}

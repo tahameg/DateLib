@@ -1,0 +1,6 @@
+# Ignore Debug and Release folders
+Debug/
+Release/
+.settings/
+.cproject
+.project
