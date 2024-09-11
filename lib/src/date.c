@@ -72,10 +72,9 @@ PUBLIC Date * set_random_date_range(Date *inout, int min_year, int max_year)
 		exit(-1);
 	}
 
-	YEAR(inout) = min_year + rand() % (max_year - min_year);
-	MON(inout) = 1 + rand() % 12;
-	MDAY(inout) = 1 + rand() % M_DAYS(YEAR(inout), MON(inout));
-
+	YEAR(inout) = min_year + rand() % (max_year - min_year+1);
+	MON(inout) = 1 + rand() % 13;
+	MDAY(inout) = 1 + rand() % (M_DAYS(YEAR(inout), MON(inout)) + 1);
 	return inout;
 }
 

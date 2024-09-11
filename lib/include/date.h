@@ -15,7 +15,7 @@
  *
  * The `Date` structure holds the day, month, and year of a date.
  */
-typedef struct {
+typedef struct Date{
     int m_mday; /**< Day of the month (1-31) */
     int m_month; /**< Month of the year (1-12) */
     int m_year; /**< Year (e.g., 2024) */
